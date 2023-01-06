@@ -1,0 +1,10 @@
+<h1>Result</h1>
+
+<% if @is_in_grid == false %>
+  <p>Sorry, <%= @guess %> can't be built out of <%= @letters %></p>
+  <% elsif @is_in_grid && @dictionary['found'] %>
+    <p>Congratulations, <%= @guess %> is a valid English word!</p>
+    <% else %>
+    <p>Sorry, <%= @guess %> is not a valid English word.</p>
+<% end %>
+<%= link_to "Play Again", "/new" %>
